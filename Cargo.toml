@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "amulet",
+    "prism",
+    "redive"
+]
+resolver = "2"
+
+[profile.dev]
+opt-level = 0
+debug = true
+split-debuginfo = "packed"
+debug-assertions = true
+overflow-checks = true
+panic = "unwind"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

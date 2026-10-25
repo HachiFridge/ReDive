@@ -1,0 +1,19 @@
+# ReDive targets Windows/MSVC only, but the build host can be Windows, Linux, or macOS.
+#
+# Native Windows builds:
+#   cargo build --target x86_64-pc-windows-msvc
+# Cross builds from non-Windows hosts:
+#   cargo xbuild
+#   cargo xcheck
+#
+# Keep the target explicit only in the commands/aliases; do not force it globally here,
+# because that prevents host-aware builds and makes Linux/macOS setups behave incorrectly.
+
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+[alias]
+xbuild-dev = "xwin build --target x86_64-pc-windows-msvc --dev"
+xbuild = "xwin build --target x86_64-pc-windows-msvc --release"
+xcheck-dev = "xwin check --target x86_64-pc-windows-msvc --dev"
+xcheck = "xwin check --target x86_64-pc-windows-msvc --release"
