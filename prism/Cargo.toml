@@ -1,0 +1,14 @@
+[package]
+name = "prism"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "prism"
+crate-type = ["cdylib"]
+
+[dependencies]
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_System_LibraryLoader",
+] }

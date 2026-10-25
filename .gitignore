@@ -1,0 +1,42 @@
+# Build output
+/debug
+/target
+
+# Editor / IDE
+/.vscode
+/.idea
+*.iml
+
+# AI agent files
+WARP.md
+AGENTS.md
+AGENT.md
+GEMINI.md
+CLAUDE.md
+.cursorrules
+.clinerules
+.windsurfrules
+.github/copilot-instructions.md
+/.gemini
+/.agents
+/.claude
+/.kilo
+/.kiro
+/.freebuff
+
+# Cargo xwin cache
+/.xwin-cache
+
+# Environment / secrets
+.env
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and text artifacts
+/*.log
+/*.txt
+/*.bak
